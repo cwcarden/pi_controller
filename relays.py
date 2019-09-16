@@ -2,7 +2,7 @@ import RPi.GPIO as GPIO
 
 GPIO.setmode(GPIO.BCM)
 
-gpio_pins = { 'mv': 2, 'z1': 3, 'z2': 4, 'z3': 5, 'z4': 6, 'z5': 7, 'z6': 8 }
+gpio_pins = { 'mv': 2, 'z1': 3, 'z2': 4, 'z3': 5, 'z4': 6, 'z5': 7, 'z6': 8, 'z7': 9 }
 
 for k,v in gpio_pins.items():
     GPIO.setup(v, GPIO.OUT)
@@ -65,8 +65,8 @@ def z6_off():
 
 #ZONE 7 Control
 def z7_on():
-    GPIO.output(gpio_pins[6], GPIO.HIGH)
-    GPIO.output(gpio_pins[6], GPIO.LOW)
+    GPIO.output(gpio_pins['z7'], GPIO.HIGH)
+    GPIO.output(gpio_pins['z7'], GPIO.LOW)
 
 def z7_off():
-    GPIO.output(gpio_pins[6], GPIO.HIGH)
+    GPIO.output(gpio_pins['z7'], GPIO.HIGH)
